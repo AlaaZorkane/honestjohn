@@ -1,0 +1,26 @@
+{
+  "name": "@alaazorkane/honestjohn",
+  "module": "main.ts",
+  "type": "module",
+  "scripts": {
+    "start": "bun run main.ts",
+    "tsc": "tsc"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.6.3"
+  },
+  "dependencies": {
+    "@inquirer/core": "^10.1.2",
+    "@solana-program/system": "0.6.2",
+    "@solana/web3.js": "^2.0.0",
+    "pino": "^9.6.0",
+    "pino-pretty": "^13.0.0",
+    "yoctocolors": "^2.1.1"
+  },
+  "exports": {
+    ".": "./app/main.ts"
+  }
+}
