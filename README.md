@@ -82,7 +82,7 @@ let signer_is_signer_pointer = signer_data_pointer.sub(87); // Account size - 1 
 
 ## The answer formula
 
-$$\left\lceil\frac{\text{signer\_data\_ptr} - \text{program\_data\_ptr} - (program\_data\_len + discrimantor\_offset) - account\_struct\_size - 1}{8}\right\rceil$$
+$$\left\lceil\frac{\text{signer_data_ptr} - \text{program_data_ptr} - (program_data_len + discrimantor_offset) - account_struct_size - 1}{8}\right\rceil$$
 
 ## Notes
 
