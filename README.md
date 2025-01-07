@@ -1,4 +1,7 @@
-# Honest John
+<h1 align="center">
+  Honest John
+</h1>
+
 <p align="center">
   <img src="https://www.cornel1801.com/disney/Pinocchio-1940/Honest_John.jpg" alt="Honest John" width="200">
 </p>
