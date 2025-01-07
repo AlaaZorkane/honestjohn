@@ -67,7 +67,7 @@ const { value: latestBlockhash } = await rpc
 log.info("latestBlockhash: %s", latestBlockhash.blockhash);
 
 const codec = getU64Codec();
-// check excalidraw to know where 1293 came from
+// check readme to know where 1293 came from
 log.info("answer: %d", 1293);
 const answer = codec.encode(1293) as Uint8Array;
 
