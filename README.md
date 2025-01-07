@@ -10,6 +10,17 @@
   <i><span style="color: gray">Why on Earth would you want to be real when you can be... FAMOUS?</span></i>
 </p>
 
+## Table of contents
+
+- [Trivia](#trivia)
+- [Overview](#overview)
+- [Program Logic](#program-logic)
+- [Vulnerability](#vulnerability)
+- [The Exploit](#the-exploit)
+- [The answer formula](#the-answer-formula)
+- [How to Deploy the Program](#how-to-deploy-the-program)
+- [How to Run with Bun](#how-to-run-with-bun)
+
 ## Trivia:
 Honest John is a sly and deceitful fox who, despite his misleading name, manipulates pinocchio for personal gain by leading him away from school and into trouble, ultimately putting pinocchio in dangerous situations for his own financial gain.
 
@@ -93,3 +104,34 @@ ceil((signer_data_ptr - program_data_ptr - (program_data_len + discrimantor_offs
 * Since we are the ones creating the program account, we hard code its size to 11 * 8 + 1 bytes, but even if we didn't, we can still calculate it programmatically.
 
 * The rating pointer is `*mut u64` and not `*mut u8`, this is why we need to divide the calculated u8 offset by 8 to get the correct u64 offset. (as done in `line 71`).
+
+
+## How to Deploy the Program
+
+1. Install and configure the Solana CLI tools.
+3. Build the program using a Solana-compatible build command (for example, if you have Solana's SDK installed, you can use a command like):
+   ```bash
+   cargo build-bpf
+   ```
+   This will produce the compiled shared object (.so) file for the Solana program.  
+4. Deploy the compiled program to your target Solana cluster (e.g., Devnet or a local validator) using the Solana command-line tool:
+   ```bash
+   solana program deploy target/deploy/challenge.so
+   ```
+5. Change the program id in the `main.ts` file to the program id you deployed.
+
+## How to Run with Bun
+
+1. Ensure you have Bun installed, or any other package manager, who gives a fuck..
+2. From the root of this repository, install dependencies:
+   ```bash
+   bun install
+   ```
+3. After installing, run the main script:
+   ```bash
+   bun run main.ts
+   ```
+   Alternatively, you can use the provided script in your package.json:
+   ```bash
+   bun start
+   ```
